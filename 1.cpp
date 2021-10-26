@@ -18,7 +18,7 @@ void foo()
     // into buffer instead of printing on stdout
     printf("%s", buffer);
 	printf("Just a simple string");
-	printf("hello, hemmlo.\n");
+	printf("hello, he,m,m,l,o.\n %%%%%%%%%%%%%%%%");
     std::printf("Strings:\n");
  
     const char* s = "Hello";
