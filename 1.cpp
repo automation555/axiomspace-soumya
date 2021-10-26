@@ -5,6 +5,7 @@
  
 void foo()
 {
+	printf("hello, hemmlo.\n");
     std::printf("Strings:\n");
  
     const char* s = "Hello";
