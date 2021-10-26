@@ -5,6 +5,19 @@
  
 void foo()
 {
+	
+	char buffer[50];
+    int a = 10, b = 20, c;
+    c = a + b;
+	   sprintf(buffer, "Sum of %d and %d is %d", a, b);
+    sprintf(buffer, "Sum of %d and %d is %d", a, b, c);
+	
+	    sprintf(buffer, "Sum of %d and %d is %d", a, b, c,d);
+ 
+    // The string "sum of 10 and 20 is 30" is stored
+    // into buffer instead of printing on stdout
+    printf("%s", buffer);
+	printf("Just a simple string");
 	printf("hello, hemmlo.\n");
     std::printf("Strings:\n");
  
