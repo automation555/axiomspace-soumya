@@ -11,7 +11,7 @@
   }
   
   int main() {
-	  int num=15,num1=15
+	  int num=15,num1=15;
       foobar(num);
       foobar1(num1);
       return 0;
