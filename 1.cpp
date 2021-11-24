@@ -11,8 +11,9 @@
   }
   
   int main() {
-      foobar(15);
-      foobar1(15);
+	  int num=15,num1=15
+      foobar(num);
+      foobar1(num1);
       return 0;
   }
 
@@ -25,7 +26,7 @@
           local_array[x] = 0;
       }
   }
-
+int arr[2];
 void setValue(int x, int y) {
 			arr[x] = y;
 		}
@@ -42,6 +43,7 @@ void getInput() {
 		
 		void getInput1() {
 			int x, y;
+			int arr_size=2;
 			scanf("%d %d", &x, &y);
 			// validate that x is a valid index for arr
 			if (x >=0 && x < arr_size)			// Compliant
