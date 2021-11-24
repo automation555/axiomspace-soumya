@@ -3,9 +3,56 @@
 #include <cstdint>
 #include <cinttypes>
  
+
+ void foobar(int x)
+  {
+      int local_array[7];
+      local_array[x] = 0;    // x is not bounds-checked
+  }
+  
+  int main() {
+      foobar(15);
+      foobar1(15);
+      return 0;
+  }
+
+ void foobar1(int x)
+  {
+      int local_array[7];
+      // verify the parameter is in range
+      if (x >= 0 && x < 7)
+      {
+          local_array[x] = 0;
+      }
+  }
+
+void setValue(int x, int y) {
+			arr[x] = y;
+		}
+		
+void getInput() {
+			int x, y;
+			scanf("%d %d", &x, &y);
+			setValue(x, y);             // Non-compliant
+		}
+
+		void setValue1(int x, int y) {
+			arr[x] = y;
+		}
+		
+		void getInput1() {
+			int x, y;
+			scanf("%d %d", &x, &y);
+			// validate that x is a valid index for arr
+			if (x >=0 && x < arr_size)			// Compliant
+			{
+				setValue(x, y);         
+			}
+		}
+		
+
 void foo()
 {
-	
 	
 	char buffer[50];
     char* s = "geeksforgeeks";
