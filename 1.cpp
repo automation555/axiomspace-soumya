@@ -3,7 +3,13 @@
 #include <cstdint>
 #include <cinttypes>
  
-
+int fun(std::set<int>& container)
+	{
+		std::set<int>::iterator i = container.begin();
+		if (*i < 100)
+			return *i;
+		return 100;
+	}
  void foobar(int x)
   {
       int local_array[7];
